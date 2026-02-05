@@ -557,18 +557,27 @@
                             title: { text: 'Volume (MMSCFD)', style: { fontWeight: 700 } }, 
                             labels: { formatter: v => v.toFixed(1) } 
                         },
+                        // TOOLTIP - Simple dan clean
                         tooltip: { 
-                            theme: 'dark',
-                            shared: false,      // cuma 1 shipper yang ditampil
-                            intersect: true,
+                            enabled: true,
+                            shared: true,
+                            intersect: false,
                             followCursor: true,
+                            theme: 'light',  // ← ubah jadi 'dark' kalau mau gelap
+                            style: {
+                                fontSize: '12px',
+                                fontFamily: 'Plus Jakarta Sans, sans-serif'
+                            },
                             x: {
                                 show: true
-                            },   // harus tepat di titik
+                            },
                             y: {
                                 formatter: function(val) {
-                                    return val.toFixed(2) + " MMSCFD";
+                                    return val.toFixed(2) + ' MMSCFD';  // ← format angka di tooltip
                                 }
+                            },
+                            marker: {
+                                show: true  // ← dot warna di tooltip
                             }
                         },
                         legend: {

@@ -92,10 +92,10 @@
 <body class="overflow-hidden flex items-center justify-center min-h-screen p-6">
     
     <!-- Main Container dengan border radius -->
-    <div class="main-container max-w-7xl w-full flex" style="height: 90vh;">
+    <div class="main-container max-w-7xl w-full flex" style="height: 85vh;">
         
         <!-- Left Side - Image -->
-        <div class="hidden md:flex md:w-1/2 relative overflow-hidden">
+        <div class="w-1/2 relative overflow-hidden">
             <!-- Background Image Site Visit -->
             <div class="absolute inset-0 bg-cover bg-center" 
                  style="background-image: url('{{ asset('images/visit.jpeg') }}');">
